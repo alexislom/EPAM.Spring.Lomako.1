@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Task2Logic
 {
+    /// <summary>
+    /// Class which contain method of finding index 
+    /// </summary>
     public static class IndexOfLeftRightSum
     {
+        /// <summary>
+        /// Finding index of element for which the sum on the left is equal to the sum on the right
+        /// </summary>
+        /// <param name="array">reference of array</param>
+        /// <returns>index of element or null</returns>
         public static int? IndexOfEqualsSum(int[] array)
         {
             if (array == null)
@@ -35,7 +43,6 @@ namespace Task2Logic
                 leftSum += array[i];
                 rightSum -= array[i + 1];
             }
-
             return null;
         }
 
