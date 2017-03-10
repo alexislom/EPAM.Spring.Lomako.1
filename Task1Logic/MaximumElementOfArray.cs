@@ -45,7 +45,7 @@ namespace Task1Logic
             {
                 return FindMaxElement<T>(array, left++, right);
             }
-            return default(T);
+            //return default(T);
         }
     }
 }
