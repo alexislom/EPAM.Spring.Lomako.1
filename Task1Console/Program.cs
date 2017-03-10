@@ -11,7 +11,7 @@ namespace Task1Console
     {
         static void Main(string[] args)
         {
-            int[] arr = { 1, 20, 3, 0, 50, 50, 3, 23, 555 };
+            int[] arr = { 1, 20, 3, 0, 50, 50, 3, 23, 5 };
             int result = MaximumElementOfArray.FindMaxElement<int>(arr, 0, arr.Length - 1);
             Console.WriteLine(result);
         }

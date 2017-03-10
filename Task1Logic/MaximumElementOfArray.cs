@@ -10,7 +10,7 @@ namespace Task1Logic
     /// Class for finding max element
     /// </summary>
     /// <remarks>Class which contains recursive algorithm for finding the maximum element in an arbitrary (unsorted) array</remarks>
-    public class MaximumElementOfArray
+    public static class MaximumElementOfArray
     {
         /// <summary>
         /// Search for the maximum element in arbitrary (unsorted) array
@@ -26,30 +26,22 @@ namespace Task1Logic
             {
                 throw new ArgumentNullException(nameof(array));
             }
-            if (left < array.GetLowerBound(0) || right < 0 || right < array.GetUpperBound(0))
+            if (left < array.GetLowerBound(0) || right < array.GetLowerBound(0) || right < left)
             {
-                throw new ArgumentOutOfRangeException(left < right ? "left" : "right");
+                throw new ArgumentOutOfRangeException(left < right ? "left border" : "right border");
             }
             if (left == right)
             {
                 return array[left];
-                //if(array[left].CompareTo(array[right]) > 0)
-                //{
-                //    return array[left];
-                //}else
-                //{
-                //    return array[right];
-                //}
             }
-            if(array[left].CompareTo(array[right]) > 0)
+            if(array[left].CompareTo(array[right]) >= 0)
             {
-                return FindMaxElement<T>(array, left, right--);
+                return FindMaxElement<T>(array, left, --right);
             }
-            if(array[left].CompareTo(array[right]) < 0)
+            else
             {
-                return FindMaxElement<T>(array, left++, right);
+                return FindMaxElement<T>(array, ++left, right);
             }
-            //return default(T);
         }
     }
 }
