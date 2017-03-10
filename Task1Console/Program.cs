@@ -14,6 +14,9 @@ namespace Task1Console
             int[] arr = { 1, 20, 3, 0, 50, 50, 3, 23, 5 };
             int result = MaximumElementOfArray.FindMaxElement<int>(arr, 0, arr.Length - 1);
             Console.WriteLine(result);
+            string[] str = { "string", "new string", "superLom", "very big muscle" };
+            string newResult = MaximumElementOfArray.FindMaxElement<string>(str, 0, str.Length - 1);
+            Console.WriteLine(newResult);
         }
     }
 }
