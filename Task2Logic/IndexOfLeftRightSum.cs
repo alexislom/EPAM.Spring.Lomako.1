@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Task2Logic
 {
     /// <summary>
-    /// Class which contain method of finding index 
+    /// Class which contain method to finding index 
     /// </summary>
     public static class IndexOfLeftRightSum
     {
