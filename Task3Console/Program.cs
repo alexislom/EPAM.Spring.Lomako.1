@@ -19,14 +19,14 @@ namespace Task3Console
             }
             
             Console.WriteLine("Array before merge sort:");
-            foreach (int x in arr)
+            foreach (var x in arr)
             {
                 Console.Write(x + " ");
             }
 
             Algorithm.MergeSort<int>(arr);
-            Console.WriteLine("\n Array after merge sort:");
-            foreach (int x in arr)
+            Console.WriteLine("\nArray after merge sort:");
+            foreach (var x in arr)
             {
                 Console.Write(x + " ");
             }
