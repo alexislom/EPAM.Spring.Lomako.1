@@ -26,7 +26,11 @@ namespace Task1Logic
             {
                 throw new ArgumentNullException(nameof(array));
             }
-            if(left == right)
+            if (left < array.GetLowerBound(0) || right < 0 || right < array.GetUpperBound(0))
+            {
+                throw new ArgumentOutOfRangeException(left < right ? "left" : "right");
+            }
+            if (left == right)
             {
                 return array[left];
                 //if(array[left].CompareTo(array[right]) > 0)
