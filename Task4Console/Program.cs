@@ -11,7 +11,7 @@ namespace Task4Console
     {
         static void Main(string[] args)
         {
-            string str1 = "kkkkaaabbbccc";
+            string str1 = "kkkkaaabbbcccflmbsaorqtqwpstuwsxqgasyz";
             string str2 = "aavvdddeeegggiiijjjrrrtttasfsdgafh";
             string result = StringConcat.MergeTwoStrings(str1, str2);
             Console.WriteLine(result);

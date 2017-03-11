@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Task4Logic
@@ -22,9 +23,28 @@ namespace Task4Logic
         {
             if (strOne == null || strTwo == null)
             {
-                throw new ArgumentNullException("You should use strings not null"); 
+                throw new ArgumentNullException("You should use strings, not null"); 
             }
-            return new string((strOne + strTwo).Distinct().OrderBy(c => c).ToArray());
+            if(IsValid(strOne) && IsValid(strTwo))
+            {
+                return new string((strOne + strTwo).Distinct().OrderBy(c => c).ToArray());
+            }else
+            {
+                throw new ArgumentException("You should use strings only with a to z letters");
+            }
         }
+
+        #region Private intermediate method
+        /// <summary>
+        /// Checking string for validity
+        /// </summary>
+        /// <param name="str">reference to string</param>
+        /// <returns>bool value (valid or not)</returns>
+        /// <remarks>Intermediate method for checking the string for validity</remarks>
+        private static bool IsValid(string str)
+        {
+            return Regex.IsMatch(str, "^[a-z]+$");
+        }
+        #endregion
     }
 }

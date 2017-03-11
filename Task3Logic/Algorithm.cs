@@ -23,7 +23,6 @@ namespace Task3Logic
                 throw new ArgumentNullException(nameof(array));
             }
             MergeSort(array, 0, array.Length);
-
         }
         /// <summary>
         /// Intermediate sorting method
